@@ -5,16 +5,28 @@ using namespace std;
 void imprimir(int quantidade){
     if(quantidade==0){
         return;
-    }
-    cout << "*" << endl;
-    quantidade--;
-    if(quantidade>0){
+    }else{
+        cout << "*" << endl;
+        quantidade--;
         imprimir(quantidade);
+    }
+    
+}
+
+int fatorial(int numero, int resultado){
+    
+    if(numero==1){
+        return resultado;
+    }else{
+        return resultado += numero*(numero-1);
+        numero --;
+        fatorial(numero, resultado);
     }
 }
 
 int main() {
     int entrada;
+    int saida;
 
     cin >> entrada;
 
