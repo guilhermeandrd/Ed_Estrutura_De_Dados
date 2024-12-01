@@ -3,6 +3,8 @@
 
 using namespace std;
 
+//mudei algo
+
 void hanoi(int qte, char ini, char aux, char fim){
   if(qte==1){
       cout << ini << "->" << fim << endl;
