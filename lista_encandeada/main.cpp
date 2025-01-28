@@ -1,22 +1,23 @@
 #include <iostream>
 #include "Node.h"
-#include "List.h"
-
+#include "ForwardList.h"
+//to com problema no reverse e no remove
 using namespace std;
 
 int main() {
+    ForwardList lista;
+    ForwardList lista2;
+    ForwardList lista3;
 
-    List lista;
-
-    for(int i=9;i>=1;i--){
-        lista.push_front(i);
+    for(int i=4;i>=1;i--){
+        lista3.push_front(i);
     }
 
-    for(auto it= lista.begin();it != lista.end();it++){
+    lista3.reverse();
+
+    for(auto it= lista3.begin();it != lista3.end();it++){
         cout << *it << " ";
     }
 
-    cout << endl;
-    
     return 0;
 }

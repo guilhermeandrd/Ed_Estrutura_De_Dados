@@ -24,11 +24,28 @@ public:
     //caminhar para frente
     //sobrecarregar o x++ pre incremento
 
+
+    //x=5
+
+    //++x
+    //retorna x=6
+
+    //ele vai 
+    //x++
+    //ele retorna 5 e depois x=6
+
+
+    //ele soma primeiro
+    //e depois atribui
+    //++x
     Iterator& operator++(){
         m_pointer = m_pointer->next;
         return *this;
     }    
     //e o ++x
+    //ele atribui
+    //e depois soma
+    //x++
     Iterator operator++(int){
         Iterator temp(m_pointer); //interador apontando para onde mpoint aponta
         m_pointer = m_pointer->next;
@@ -42,7 +59,8 @@ public:
     }
 
     bool operator!=(const Iterator& it){
-        return !(*this==it);
+        //return m_point != it.m_pointer;
+        return !(*this==it);//ponteiro para objeto
     }
 
   //operador de atribuicao e destructor ja tem
