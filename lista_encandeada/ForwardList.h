@@ -333,14 +333,14 @@ class ForwardList{
         // alocar novos nos. Voce precisara apenas de tres ponteiros adicionais 
         // para te ajudar a reverter a sua lista.
         void reverse(){ 
-            if(m_size==1){
+            if(m_size==1||empty()){
                 return;
             }
 
 
-            Node *atual= m_head;
+            Node *atual= m_head->next;
             Node *anterior= nullptr;
-            Node *proximo = m_head->next;
+            Node *proximo = nullptr;
             
             /*if(m_size==2){
                 aux->next = aux->next->next;
